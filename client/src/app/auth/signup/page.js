@@ -43,6 +43,7 @@ export default function page() {
   };
   const signupOnClick = async (e) => {
     e.preventDefault();
+    console.log("signup triggered")
     setLoader(true);
     try {
       if (value.password !== value.rePassword) {
@@ -64,10 +65,6 @@ export default function page() {
           setSuccess(true);
           setLoader(false);
           setUserId(signup.id);
-          // successDiv.current.style.top = "2rem";
-          // setTimeout(() => {
-          //   successDiv.current.style.top = "-15rem";
-          // }, 3000);
         } else {
           setLoader(false);
           setSuccess(false);

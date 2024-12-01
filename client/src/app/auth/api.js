@@ -45,6 +45,7 @@ export const signupAuth = async (
       cache: "default",
     });
     const responseData = await response.json();
+    console.log(responseData);
     return responseData;
   } catch (error) {
     console.error("Error fetching recent messages:", error.message);
